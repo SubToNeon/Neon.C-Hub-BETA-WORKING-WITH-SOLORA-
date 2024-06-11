@@ -1,12 +1,8 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local Player = game.Players.LocalPlayer
-  local Window = OrionLib:MakeWindow({
-		Name = "Neon.C Hub BETA",
-		HidePremium = false,
-		SaveConfig = true,
-		ConfigFolder = "OrionTest",
-        IntroText = "Neon.C Hub"       
-})
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+
+local Window = OrionLib:MakeWindow({Name = "Neon.C Hub BETA", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
