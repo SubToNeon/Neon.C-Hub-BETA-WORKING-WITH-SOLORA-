@@ -397,7 +397,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Copy Discord Link Here",
 	Callback = function()
-      		setclipboard("Put The Link Here")
+      		setclipboard("https://discord.gg/5R2SGE4BDN") --This Will Copy The Link Of The Key
   	end    
 })
 
