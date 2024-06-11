@@ -1,6 +1,12 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-local Window = OrionLib:MakeWindow({Name = "Neon.C Hub BETA", HidePremium = false, SaveConfig = true, ConfigFolder = "Neon.C Hub"})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local Player = game.Players.LocalPlayer
+  local Window = OrionLib:MakeWindow({
+		Name = "Neon.C Hub BETA",
+		HidePremium = false,
+		SaveConfig = true,
+		ConfigFolder = "OrionTest",
+        IntroText = "Neon.C Hub"       
+})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -21,13 +27,13 @@ OrionLib:MakeNotification({
 
 OrionLib:MakeNotification({
 	Name = "Coming Soon...",
-	Content = "Futures Coming Soon!",
+	Content = "More Futures Coming Soon!",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
 
 OrionLib:MakeNotification({
-	Name = "Coming Soon...",
+	Name = "Creator",
 	Content = "Made by Neonat!",
 	Image = "rbxassetid://4483345998",
 	Time = 5
@@ -378,6 +384,20 @@ end)
   	end    
 })
 
+Tab:AddButton({
+	Name = "More Futures Coming Soon!",
+	Callback = function()
+      		print("More Futures Coming Soon!")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sript Made By Neoncat!",
+	Callback = function()
+      		print("Sript Made By Neoncat!")
+  	end    
+})
+
 local NiceTab = Window:MakeTab({
 	Name = "STATUS",
 	Icon = "rbxassetid://4483345998",
@@ -403,8 +423,8 @@ NiceTab:AddButton({
 })
 
 NiceTab:AddButton({
-	Name = "Skeleton ESP (WORKING)",
+	Name = "Skeleton ESP (A BIT LAGGING)",
 	Callback = function()
-      		print("Skeleton ESP (WORKING)")
+      		print("Skeleton ESP (A BIT LAGGING)")
   	end    
 })
