@@ -394,6 +394,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Copy Discord Link Here",
+	Callback = function()
+      		setclipboard("Put The Link Here")
+  	end    
+})
+
 local NiceTab = Window:MakeTab({
 	Name = "STATUS",
 	Icon = "rbxassetid://4483345998",
