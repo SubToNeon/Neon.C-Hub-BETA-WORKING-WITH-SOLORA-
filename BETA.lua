@@ -38,9 +38,37 @@ OrionLib:MakeNotification({
 Tab:AddButton({
 	Name = "Auto Parry + Visualizer",
 	Callback = function()
-      		print("SUBSRIBE TO NEONAT!")
 			
 			loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Spam",
+	Callback = function()
+      		
+			loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Win (CANT TURN OFF)",
+	Callback = function()
+      		
+        getgenv().god = true
+while getgenv().god and task.wait() do
+    for _,ball in next, workspace.Balls:GetChildren() do
+        if ball then
+            if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position, ball.Position)
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Highlight") then
+                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
+                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
+                end
+            end
+        end
+    end
+end
   	end    
 })
 
@@ -394,15 +422,8 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddButton({
-	Name = "Copy Discord Link Here",
-	Callback = function()
-      		setclipboard("https://discord.gg/5R2SGE4BDN") --This Will Copy The Link Of The Key
-  	end    
-})
-
 local NiceTab = Window:MakeTab({
-	Name = "STATUS",
+	Name = "Status",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -419,6 +440,20 @@ NiceTab:AddButton({
 })
 
 NiceTab:AddButton({
+	Name = "Auto Spam (WORKING)",
+	Callback = function()
+      		print("Auto Spam (WORKING)")
+  	end    
+})
+
+NiceTab:AddButton({
+	Name = "Auto Win (WORKING)",
+	Callback = function()
+      		print("Auto Win (WORKING)")
+  	end    
+})
+
+NiceTab:AddButton({
 	Name = "Hitbox + Tracers (WORKING)",
 	Callback = function()
       		print("Hitbox + Tracers (WORKING)")
@@ -429,5 +464,50 @@ NiceTab:AddButton({
 	Name = "Skeleton ESP (A BIT LAGGING)",
 	Callback = function()
       		print("Skeleton ESP (A BIT LAGGING)")
+  	end    
+})
+
+local NowTab = Window:MakeTab({
+	Name = "Socials",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local NowSection = NowTab:AddSection({
+	Name = "SOCIAL LINKS"
+})
+
+NowTab:AddButton({
+	Name = "Copy Discord Link",
+	Callback = function()
+      		setclipboard("https://discord.gg/5R2SGE4BDN") --This Will Copy The Link Of The Key
+  	end    
+})
+
+NowTab:AddButton({
+	Name = "Copy YouTube Link",
+	Callback = function()
+      		setclipboard("https://www.youtube.com/@justneoncat") --This Will Copy The Link Of The Key
+  	end    
+})
+
+NowTab:AddButton({
+	Name = "Copy Twitter/X Link",
+	Callback = function()
+      		setclipboard("https://x.com/neoncat3436") --This Will Copy The Link Of The Key
+  	end    
+})
+
+NowTab:AddButton({
+	Name = "Copy Official Site Link",
+	Callback = function()
+      		setclipboard("https://neonexploits.site.xyz") --This Will Copy The Link Of The Key
+  	end    
+})
+
+NowTab:AddButton({
+	Name = "Copy TikTok Link",
+	Callback = function()
+      		setclipboard("https://www.tiktok.com/@neoncatv2?is_from_webapp=1&sender_device=pc") --This Will Copy The Link Of The Key
   	end    
 })
