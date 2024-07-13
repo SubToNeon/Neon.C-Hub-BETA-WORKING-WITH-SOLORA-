@@ -511,3 +511,20 @@ NowTab:AddButton({
       		setclipboard("https://www.tiktok.com/@neoncatv2?is_from_webapp=1&sender_device=pc") --This Will Copy The Link Of The Key
   	end    
 })
+
+local LoveTab = Window:MakeTab({
+	Name = "PURCHASING",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local LoveSection = LoveTab:AddSection({
+	Name = "Purchase Premium"
+})
+
+LoveTab:AddButton({
+	Name = "Click To Purchase PREMIUM V3 (WILL COPY A LINK)",
+	Callback = function()
+      		setclipboard("https://neonexploits.site.xyz") --This Will Copy The Link Of The Key
+  	end    
+})
