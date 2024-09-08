@@ -136,9 +136,9 @@ local NowSection = NowTab:AddSection({
 })
 
 NowTab:AddButton({
-	Name = "Copy Discord Link",
+	Name = "Copy Telegram Link",
 	Callback = function()
-      		setclipboard("https://discord.gg/5R2SGE4BDN") --This Will Copy The Link Of The Key
+      		setclipboard("https://t.me/+81b9kcV4F3ExMzhk") --This Will Copy The Link Of The Key
   	end    
 })
 
